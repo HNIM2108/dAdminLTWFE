@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script>
+    <title>Thông tin Sinh viên</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách Sinh viên</h1>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Họ</th>
+                    <th>Tên</th>
+                    <th>Tổng số lần tham gia</th>
+                    <th>Tỷ lệ hoàn thành (%)</th>
+                    <th>Điểm trung bình</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+
+        <div id="actions">
+            <button onclick="addStudent()">Thêm Sinh viên</button>
+            <button onclick="editStudent()">Sửa Sinh viên</button>
+            <button onclick="deleteStudent()">Xoá Sinh viên</button>
+        </div>
+
+       <h3>Tìm sinh viên theo tên</h3>
+       
+       <input type="text" id="findName">
+       <button onclick="findStudentTable()">Tìm</button>
+
+       <table id="studentTable1">
+        <thead>
+            <tr>
+                <th>Họ</th>
+                <th>Tên</th>
+                <th>Tổng số lần tham gia</th>
+                <th>Tỷ lệ hoàn thành (%)</th>
+                <th>Điểm trung bình</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    </div>
+
+   
+
+    <!-- Biểu đồ phân phối điểm -->
+    <div id="scoreDistributionChart" class="chart-container">
+        <canvas id="chartCanvas"></canvas>
+    </div>
+</body>
+</html>
